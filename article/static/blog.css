@@ -1,0 +1,136 @@
+/*
+ * Copyright (C) 2017  Allen Wang <wangyao0125@gmail.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+html {
+    width: 100%;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    color: #333;
+    background-color: #ffffff;
+}
+img {
+  max-width: 56rem;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: rgb(61, 146, 201);
+}
+a:hover,
+
+a:focus {
+    text-decoration: underline;
+}
+
+#content {
+    margin: 0 auto;
+    max-width: 66rem;
+    background-color: #ffffff;
+}
+
+.post-title{
+  font-size: 2.2rem;
+  color: #333;
+}
+
+
+
+.menu {
+    border-bottom: 0.1rem solid #aaaaaa;
+}
+
+.menu .menu-home {
+    text-align: center;
+    font-size: 4.2rem;
+    padding-top: 3.25rem;
+    padding-bottom: 1.2rem;
+}
+
+.menu .menu-home a {
+    color: rgb(61, 146, 201);
+    text-decoration: none;
+    text-decoration: none;
+}
+
+.menu .menu-links {
+    font-size: 0.875rem;
+    height: 2rem;
+    text-align: center;
+    padding-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.menu .menu-links .menu-item {
+    height: 2rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu .menu-links .menu-item a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu .menu-links .menu-item a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.menu .menu-links .menu-active a {
+    color: #000;
+    text-decoration: none;
+}
+
+@media (max-width: 42rem) {
+    .menu .menu-home {
+        font-size: 2.2rem;
+        padding-top: 3.25rem;
+        padding-bottom: 3.2rem;
+    }
+    .menu .menu-links {
+        display: flex;
+    }
+    .menu .menu-links .menu-item {
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+    .menu-item {
+        display: block;
+    }
+}
+
+.mid {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.footer .footer-bot {
+    margin: 0, auto;
+    text-align: center;
+    font-size: 0.8rem;
+}

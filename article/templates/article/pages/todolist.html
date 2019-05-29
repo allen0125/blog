@@ -1,0 +1,11 @@
+{% extends "article/temp/base.html" %}
+{% load custom_markdown %}Found
+{% block content %}
+			<section class="menu-item">
+				<div class="post-description">
+					<p>
+						{{ post_list.content|custom_markdown}}
+					</p>
+				</div>
+			</section>
+{% endblock %}

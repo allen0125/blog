@@ -1,0 +1,22 @@
+{% extends "article/temp/base.html" %}
+{% load custom_markdown %}
+{% block content %}
+			{% for post in post_list %}
+	        <section class="post">
+	            <header class="post-header">
+	                <h2 class="post-title"><a href="/{{post.id}}">{{ post.title }}</a></h2>
+
+	                    <p class="post-meta">
+	                        Time:  <a href="#">{{ post.date_time }}</a> <a href="#">{{ post.category }}</a>
+	                    </p>
+	            </header>
+
+	                <div class="post-description">
+	                    <p>
+	                        {{ post.content|custom_markdown|truncatewords_html:20}}
+                            <a href="/{{post.id}}">阅读全部</a>
+	                    </p>
+	                </div>
+	        </section>
+	    {% endfor %}
+{% endblock %}

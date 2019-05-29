@@ -16,5 +16,6 @@ pip3 install django-admin-bootstrapped
 
 ```
 
+
 Gitlab-runner 为 ssh模式，登录blog所在服务器进行操作。
 

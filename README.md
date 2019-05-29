@@ -2,8 +2,6 @@
 
 * This is Allen's Blog write by django
 
-[![pipeline status](https://git.allen0125.com/Allen/blog/badges/master/pipeline.svg)](https://git.allen0125.com/Allen/blog/commits/master)
-
 Deploy : python3,Django 1.10,markdown,pygments
 
 

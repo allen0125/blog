@@ -2,6 +2,8 @@
 
 * This is Allen's Blog write by django
 
+[![pipeline status](https://travis-ci.com/allen0125/Blog.svg?token=sLmQpeMKHZwtxhbyapv6&branch=master)]
+
 Deploy : python3,Django 1.10,markdown,pygments
 
 

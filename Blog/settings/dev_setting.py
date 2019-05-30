@@ -1,4 +1,5 @@
 from Blog.settings.base_setting import *
+import os
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -18,7 +19,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'blog',
         'USER': 'postgres',
-        'PASSWORD': '',
+        'PASSWORD': os.environ.get("DB_PASSWD"),
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }

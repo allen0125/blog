@@ -10,6 +10,7 @@ script: true
 
 before_install:
  - openssl aes-256-cbc -K $encrypted_1ebe7c3c7313_key -iv $encrypted_1ebe7c3c7313_iv -in id_rsa.enc -out id_rsa -d
+ - chmod 600 ~/.ssh/id_rsa
 
 after_success: 
- - ls
+ - ssh travis@172.104.111.71 -p 10022 -o StrictHostKeyChecking=no 'cd ~/Blog && git pull   #使用ssh连接服务器

@@ -1,16 +1,13 @@
 language: python
 python:
-  - "3.6"
-# command to install dependencies
+- '3.6'
 install:
-  - pip install -r requirements.txt
-# command to run tests
-
+- pip install -r requirements.txt
 script: true
-
 before_install:
- - openssl aes-256-cbc -K $encrypted_1ebe7c3c7313_key -iv $encrypted_1ebe7c3c7313_iv -in id_rsa.enc -out id_rsa -d
- - chmod 600 ~/.ssh/id_rsa
-
-after_success: 
- - ssh travis@172.104.111.71 -p 10022 -o StrictHostKeyChecking=no 'cd ~/Blog && git pull   #使用ssh连接服务器
+- openssl aes-256-cbc -K $encrypted_ed665cbc038c_key -iv $encrypted_ed665cbc038c_iv
+  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+after_success:
+- ssh travis@172.104.111.71 -p 10022 -o StrictHostKeyChecking=no 'cd ~/Blog && git
+  pull

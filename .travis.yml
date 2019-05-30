@@ -9,4 +9,4 @@ before_install:
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
 after_success:
 - ssh root@172.104.111.71 -p 10022 -o StrictHostKeyChecking=no 'cd /var/www/Blog &&
-  git pull
+  git pull && supervisorctl restart blog

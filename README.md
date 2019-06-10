@@ -16,3 +16,4 @@ pip3 install django-admin-bootstrapped
 
 ```
 
+

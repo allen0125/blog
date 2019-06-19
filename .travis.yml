@@ -10,7 +10,4 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 
 after_success:
-- ssh root@172.104.111.71 -p 10022 -o StrictHostKeyChecking=no
-- cd /var/www/blog
-- git pull origin master
-- supervisorctl restart blog
+- ssh root@172.104.111.71 -p 10022 -o StrictHostKeyChecking=no "cd /var/www/blog && git pull origin master && supervisorctl restart blog "

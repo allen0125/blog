@@ -15,9 +15,20 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.contrib.sitemaps import GenericSitemap
+from django.contrib.sitemaps.views import sitemap
+from article.models import Article
+
+info_dict = {
+    'queryset': Article.objects.all(),
+    'date_field': 'date_time',
+}
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('article.urls')),
     url(r'^markdownx/', include('markdownx.urls')),
+    url('sitemap.xml', sitemap,
+        {'sitemaps': {'blog': GenericSitemap(info_dict)}},
+        name='django.contrib.sitemaps.views.sitemap'),
 ]

@@ -15,3 +15,7 @@ class Article(models.Model):
 
     class Meta:  # 按时间下降排序
         ordering = ['-date_time']
+
+    def get_absolute_url(self):
+        abs_url = "/" + str(self.id) + "/"
+        return abs_url

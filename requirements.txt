@@ -1,5 +1,4 @@
-Django==1.8.18
-django-admin-bootstrapped==2.5.7
+Django==2.2.5
 django-markdownx==2.0.22
 Markdown==2.6.9
 Pillow==6.0.0

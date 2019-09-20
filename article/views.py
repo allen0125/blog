@@ -11,7 +11,7 @@ def index(request):
         template = loader.get_template('article/pages/index.html')
     except Article.DoesNotExist as e:
         raise Http404('article/pages/404.html')
-    return HttpResponse(template.render(request))
+    return HttpResponse(template.render({}, request))
 
 
 def home(request):

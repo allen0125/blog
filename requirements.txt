@@ -1,7 +1,7 @@
 Django==2.2.5
 django-markdownx==2.0.22
 Markdown==2.6.9
-Pillow==6.0.0
+Pillow==6.2.0
 psycopg2==2.7.3.2
 Pygments==2.2.0
 pytz==2017.2

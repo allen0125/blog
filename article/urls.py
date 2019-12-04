@@ -7,6 +7,6 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^blog', views.PostListView.as_view(), name='blog_list'),
     path(r'<post_id>/', views.PostDetailView.as_view(), name='blog_detail'),
-    # path('todolist', views.TodoDetailView.as_view(), name='todolist'),
-    # path('about', views.AllenCVView.as_view(), name='about'),
+    path('todolist', views.TodoDetailView.as_view(), name='todolist'),
+    path('about', views.AllenCVView.as_view(), name='about'),
 ]

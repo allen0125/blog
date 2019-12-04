@@ -27,12 +27,12 @@ class Article(models.Model):
         queryset = cls.objects.filter(is_blog=True)
         return queryset
 
-    # @classmethod
-    # def get_bio(cls):
-    #     queryset = cls.objects.get(is_bio=True)
-    #     return queryset
+    @classmethod
+    def get_bio(cls):
+        queryset = cls.objects.get(is_bio=True)
+        return queryset
 
-    # @classmethod
-    # def get_todolist(cls):
-    #     queryset = cls.objects.get(is_todolist=True)
-    #     return queryset
+    @classmethod
+    def get_todolist(cls):
+        queryset = cls.objects.get(is_todolist=True)
+        return queryset

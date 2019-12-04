@@ -28,5 +28,5 @@ class Article(models.Model):
 
     @classmethod
     def get_bio(cls):
-        queryset = cls.objects.get(is_bio=True)
+        queryset = cls.objects.filter(is_bio=True)[0]
         return queryset

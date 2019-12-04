@@ -28,7 +28,7 @@ class PostDetailView(DetailView):
 
 
 class TodoDetailView(ListView):
-    queryset = Article.objects.get(title="要填的坑")
+    queryset = Article.objects.filter(title="要填的坑")[0]
     template_name = 'article/pages/post.html'
     context_object_name = 'post'
 

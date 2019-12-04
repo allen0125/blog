@@ -27,13 +27,13 @@ class PostDetailView(DetailView):
     pk_url_kwarg = 'post_id'
 
 
-class TodoDetailView(ListView):
-    queryset = Article.objects.get(title="要填的坑")
-    template_name = 'article/pages/post.html'
-    context_object_name = 'post'
+# class TodoDetailView(ListView):
+#     queryset = Article.objects.get(title="要填的坑")
+#     template_name = 'article/pages/post.html'
+#     context_object_name = 'post'
 
 
-class AllenCVView(ListView):
-    queryset = Article.get_bio()
-    template_name = 'article/pages/post.html'
-    context_object_name = 'post'
+# class AllenCVView(ListView):
+#     queryset = Article.get_bio()
+#     template_name = 'article/pages/post.html'
+#     context_object_name = 'post'

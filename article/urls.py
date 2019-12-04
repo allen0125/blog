@@ -9,6 +9,6 @@ urlpatterns = [
     url(r'^blog', views.PostListView.as_view(), name='blog_list'),
     # url(r'^(\d+)/', views.detail, name='detail'),
     path(r'<post_id>/', views.PostDetailView.as_view(), name='blog_detail'),
-    path('todolist', views.TodoDetailView.as_view(), name='todolist'),
-    path('about', views.AllenCVView.as_view(), name='about'),
+    # path('todolist', views.TodoDetailView.as_view(), name='todolist'),
+    # path('about', views.AllenCVView.as_view(), name='about'),
 ]

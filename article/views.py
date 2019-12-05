@@ -9,10 +9,6 @@ from .models import Article
 
 
 # Create your views here.
-def index(request):
-    template = loader.get_template('article/pages/index.html')
-    return HttpResponse(template.render({}, request))
-
 
 class PostListView(ListView):
     queryset = Article.get_blog_list()

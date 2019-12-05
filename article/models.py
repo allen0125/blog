@@ -29,10 +29,10 @@ class Article(models.Model):
 
     @classmethod
     def get_bio(cls):
-        queryset = cls.objects.get(is_bio=True)
+        queryset = cls.objects.filter(is_bio=True)[0]
         return queryset
 
     @classmethod
     def get_todolist(cls):
-        queryset = cls.objects.get(is_todolist=True)
+        queryset = cls.objects.filter(is_todolist=True)[0]
         return queryset

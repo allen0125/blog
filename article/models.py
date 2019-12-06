@@ -25,14 +25,20 @@ class Article(models.Model):
     @classmethod
     def get_blog_list(cls):
         queryset = cls.objects.filter(is_blog=True)
+        if not queryset:
+            queryset = cls.objects.none()
         return queryset
 
     @classmethod
     def get_bio(cls):
-        queryset = cls.objects.filter(is_bio=True)[0]
+        queryset = cls.objects.filter(is_bio=True).first()
+        if not queryset:
+            queryset = cls.objects.none()
         return queryset
 
     @classmethod
     def get_todolist(cls):
-        queryset = cls.objects.filter(is_todolist=True)[0]
+        queryset = cls.objects.filter(is_todolist=True).first()
+        if not queryset:
+            queryset = cls.objects.none()
         return queryset
